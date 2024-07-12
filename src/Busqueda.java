@@ -26,7 +26,7 @@ public class Busqueda {
                 String password = "123456";
 
                 String codigo_producto = procuctoBuscadoTF.getText();
-                String sql = "SELECT * FROM PRODUCTO WHERE codigo_producto ?";
+                String sql = "SELECT * FROM PRODUCTO WHERE codigo_producto = ?";
 
                 try (Connection connection = DriverManager.getConnection(url, user, password)) {
                     PreparedStatement preparedStatement = connection.prepareStatement(sql);
